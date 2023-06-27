@@ -1,0 +1,33 @@
+/* Theme Name: twenty twenty Child Theme
+Theme URI:    https://github.com/Shoaib-12-Boo
+Description:  A Twenty Twenty-One child theme 
+Author:       child theme
+Author URI:   https://github.com/Shoaib-12-Boo
+Template:     twentytwentyone
+Version:      1.0.0
+Text Domain:  twentytwentyonechild */
+
+body {
+    background-color: #e90c1e;
+}
+.site-title {
+    color: #0cd2e0;
+}
+.site-description {
+    color: #6e1663;
+}
+body {
+     background-color: #fdf8ef;
+     color: #7d7b77;
+}
+.entry-footer {
+    color: #ffaa00;
+}
+.entry-title {
+    color: #ffac07;
+    font-weight: bold;
+}
+.widget-area {
+    color: #1d0358;
+}
+
