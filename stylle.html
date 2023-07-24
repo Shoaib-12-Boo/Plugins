@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #product-details {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Product Information</h1>
+  <input type="checkbox" id="show-details">
+  <label for="show-details">Show Product Details</label>
+
+  <div id="product-details">
+    <h2>Product Name</h2>
+    <p>This is some information about the product.</p>
+    <p>Price: $19.99</p>
+    <p>Availability: In stock</p>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('show-details');
+    const productDetails = document.getElementById('product-details');
+
+    checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+        productDetails.style.display = 'block';
+      } else {
+        productDetails.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
