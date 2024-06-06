@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  background-color: #F4F4F4;
+  height: 550px;
+  align-items: center;
+}
+
+.g-color {
+  color: #448b7e;
+}
+
+.cus-h-color {
+  color: #4A4E57;
+}
+
+.cus-fs-1 {
+  font-size: 2rem;
+}
+
+.cus-fs-2 {
+  font-size: 1.5rem;
+}
+
+.light-f {
+  font-weight: 600;
+}
+
+#info {
+  width: 40%;
+  padding-right: 4rem;
+}
+
+.cus-mb {
+  margin-bottom: .75rem;
+}
+
+.cus-mt {
+  margin-top: 2rem;
+}
+
+.cus-btn {
+  padding: 10px;
+  background-color: #4D9B8C;
+  font-weight: bold;
+  border: none;
+  font-size: 14px;
+}
+
+.cus-btn a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#map-container {
+  width: 60%;
+  height: 400px;
+  padding-left: 5rem;
+}
+
+.im-1 {
+  fill: #fff;
+  stroke: #d6d6d6;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  opacity: 0.5;
+  pointer-events: all;
+}
+
+.im-1:hover {
+  fill: #448b7e;
+  transition: fill 0.5s;
+}
+
+.im-active {
+  fill: #448b7e;
+}
+
+.region {
+  cursor: pointer;
+}
+
+.region-info {
+  display: none;
+}
+
+.region-info.active {
+  display: block;
+}
+/* mediaqureis */
+@media screen and (max-width: 480px) {
+  .section{
+    flex-direction: column;
+    height: auto;
+  }
+  #map-container{
+    width: 100%;
+    height: auto;
+    padding: 30px 0px 0px 30px;
+  }
+  #info{
+    width: 100%;
+    padding: 0 2rem 2rem 2rem;
+  }
+  #map{
+    /* height: 350px; */
+  }
+}
