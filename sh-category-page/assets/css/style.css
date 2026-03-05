@@ -1,0 +1,221 @@
+/* ==========================================================================
+   SH Category Page Styles
+   ========================================================================== */
+
+.sh-category-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Sidebar --- */
+.sh-sidebar {
+    flex: 0 0 250px;
+    width: 250px;
+}
+
+.sh-sidebar-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #aeaeae; /* Light gray to match image roughly */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sh-parent-categories-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sh-parent-cat-item {
+    margin-bottom: 10px;
+}
+
+.sh-parent-cat-item a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline; /* Matches the image style */
+    transition: color 0.2s ease;
+}
+
+.sh-parent-cat-item a:hover {
+    color: #666;
+}
+
+.sh-parent-cat-item.active a {
+    /* Styles for the currently selected category */
+    color: #555;
+}
+
+/* --- Main Content --- */
+.sh-main-content {
+    flex: 1; /* Takes up remaining space */
+    min-width: 0; /* Prevents flex overflow issues */
+}
+
+/* Breadcrumbs */
+.sh-breadcrumbs {
+    font-size: 14px;
+    font-weight: bold;
+    color: #aeaeae;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.sh-breadcrumbs a {
+    color: #aeaeae;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sh-breadcrumbs a:hover {
+    color: #666;
+}
+
+.sh-breadcrumbs .current {
+    color: #666; /* Slightly darker for the active page in breadcrumb */
+}
+
+.sh-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sh-main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #aeaeae;
+    text-align: left; /* Aligned left as per the image */
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- Child Categories Grid --- */
+.sh-child-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 per row */
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.sh-child-cat-item {
+    text-align: center;
+}
+
+.sh-child-cat-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.sh-cat-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Square images */
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #f5f5f5; /* Light grey placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sh-cat-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.sh-child-cat-item a:hover .sh-cat-image-wrapper img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.sh-cat-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.sh-child-cat-item a:hover .sh-cat-title {
+    color: #333;
+}
+
+/* --- WooCommerce Products Grid --- */
+.sh-products-container ul.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 per row */
+    gap: 20px;
+}
+
+.sh-products-container ul.products li.product {
+    width: auto !important;
+    margin: 0 !important;
+    float: none !important;
+    clear: none !important;
+}
+
+/* Pagination */
+.sh-pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sh-pagination .page-numbers {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.sh-pagination .page-numbers.current {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 1024px) {
+    .sh-child-categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 per row */
+        gap: 30px;
+    }
+    .sh-products-container ul.products {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 per row */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sh-category-page-container {
+        flex-direction: column;
+    }
+
+    .sh-sidebar {
+        width: 100%;
+        flex: none;
+        margin-bottom: 30px;
+    }
+
+    .sh-child-categories-grid {
+        grid-template-columns: 1fr; /* Mobile: 1 per row */
+        gap: 20px;
+    }
+
+    .sh-products-container ul.products {
+        grid-template-columns: 1fr; /* Mobile: 1 per row */
+        gap: 10px;
+    }
+}

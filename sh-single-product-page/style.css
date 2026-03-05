@@ -1,0 +1,325 @@
+.sh-product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    background-color: transparent;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.sh-product-container * {
+    box-sizing: border-box;
+}
+
+.sh-product-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sh-breadcrumb {
+    font-size: 11px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sh-product-title {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #b0b0b0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+    line-height: 1.2 !important;
+}
+
+.sh-product-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Column - Gallery */
+.sh-product-gallery {
+    flex: 0 0 55%;
+    display: flex;
+    gap: 15px;
+}
+
+.sh-main-image-wrapper {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    min-height: 400px;
+}
+
+.sh-main-image-wrapper img {
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+}
+
+.sh-brand-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: 900;
+    color: #e31837;
+    /* Hanes red */
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1;
+}
+
+.sh-gallery-thumbnails {
+    width: 80px;
+    flex: 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sh-thumbnail {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sh-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+}
+
+.sh-thumbnail span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+}
+
+.sh-thumbnail.sh-active {
+    border-color: #000;
+    border-width: 2px;
+    padding: 7px;
+    /* compensate for border width */
+}
+
+/* Right Column - Details */
+.sh-product-details {
+    flex: 1;
+}
+
+.sh-short-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.sh-short-description p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.sh-short-description ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.sh-short-description li {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.sh-product-price {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.sh-variation-row {
+    margin-bottom: 25px;
+}
+
+.sh-variation-label {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.sh-color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.sh-swatch {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.1s;
+    box-sizing: border-box;
+}
+
+.sh-swatch:hover {
+    transform: scale(1.1);
+}
+
+.sh-swatch.sh-active {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+    border: none;
+}
+
+.sh-selected-color-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 8px;
+}
+
+.sh-size-qty-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sh-size-qty-row .sh-size-selector-wrapper {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.sh-size-qty-row .sh-qty-input {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.sh-size-qty-row .sh-remove-row {
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: color 0.2s;
+}
+
+.sh-size-qty-row .sh-remove-row:hover {
+    color: #e31837;
+}
+
+.sh-size-selector-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    max-width: 100%;
+}
+
+.sh-size-dropdown {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    font-family: inherit;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    height: 48px;
+    -webkit-appearance: menulist;
+    appearance: menulist;
+}
+
+.sh-qty-input {
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 15px;
+    text-align: center;
+    font-family: inherit;
+    outline: none;
+    height: 48px;
+}
+
+.sh-add-another-size {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none !important;
+    margin-bottom: 30px;
+}
+
+.sh-add-another-size:hover {
+    text-decoration: underline !important;
+}
+
+.sh-add-to-quote-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #00ff00;
+    color: #000 !important;
+    border: none;
+    border-radius: 50px;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.sh-add-to-quote-btn:hover {
+    background-color: #00cc00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .sh-product-layout {
+        flex-direction: column;
+    }
+
+    .sh-product-gallery {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .sh-product-details {
+        width: 100%;
+    }
+}
